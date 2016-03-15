@@ -1,0 +1,10 @@
+.home #content {
+	background-color: $home;
+	height: 100vh;
+}
+
+.intro {
+    position: absolute;
+ 	top: 40%;
+  	transform: translateY(-40%);
+}

@@ -1,0 +1,8 @@
+footer {
+	@include margin(3rem null null null);
+	@include pad(2rem 0 null 0);
+    border-top: 1px solid $base-horizontal-rule;
+    @include media($bp-large) {
+        @include span-columns(12);
+    }  
+}

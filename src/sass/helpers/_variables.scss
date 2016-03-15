@@ -1,0 +1,43 @@
+$sans-serif: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+$base-font-family: $sans-serif;
+
+// Sizes
+$base-font-size: 16px;
+
+$base-line-height: $base-font-size * 1.5;
+//$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1);
+
+// Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+//$header-line-height: $base-font-size * 1.25;
+//$base-border-radius: em(3);
+
+// Colors
+$blue: 			rgba(65, 131, 196, 1);
+$light-gray:    rgba(238, 238, 238, 1);
+$green:			rgba(30, 129, 70, 1);
+$army-green: 	rgba(111,119,34, 1);
+$light-green: 	rgba(134, 145, 34, 1);
+$red: 			rgba(206, 96, 89, 1);
+$dark-blue: 	rgba(28,74,119, 1);
+$white: 		rgba(255,255,255, 1);
+$black: 		rgba(0, 0, 0, 1);
+
+// Background Color
+$home: $blue;
+$about: $blue;
+$designer: $green;
+$developer: $red;
+$qa: $dark-blue;
+$customerservice: $army-green;
+$project: $light-green;
+
+// Font Colors
+$base-horizontal-rule: $light-gray;
+$base-masthead: $white;
+
+$base-font-color: $black;
+$base-accent-color: $blue;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);

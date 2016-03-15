@@ -1,0 +1,25 @@
+header {
+    background-color: $home;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    .developer & { background-color: $developer; }
+    .designer & { background-color: $designer; }
+    .customerservice & { background-color: $customerservice; }
+    .qa & { background-color: $qa; }
+    .project & { background-color: $project; }
+    .inner {
+        @include outer-container;
+        @include pad(1rem 2rem 1rem 2rem);
+    }
+}
+/*
+.markdown-body h2:before {
+    @include media($bp-large) {
+        content:"";
+        display:block;
+        height:90px; 
+        margin:-90px 0 0;
+        visibility: hidden;
+    }
+}*/

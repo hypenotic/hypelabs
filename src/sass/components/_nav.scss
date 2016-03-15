@@ -1,0 +1,58 @@
+.primary {
+    display: none;
+    @include media($bp-large) {
+        display: inline;
+        float: right;
+        margin-top: .3rem;
+        & a:not(:last-child) {
+            margin-right: 1.25rem;
+        }
+    }
+}
+
+.mobile {
+    position: absolute;
+    right: 0; //change to left for left open
+    width: 260px;
+    ul {
+        list-style-type: none;
+    }
+    li {
+        @include pad(0.4rem 0 0.4rem 0);
+    }
+    a {
+        opacity: 1.0;
+        color: $white;
+    }
+    @include media($bp-large) {
+        display: none;
+    }
+}
+
+#button {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    @include transition-property(background);
+    @include transition-duration(0.3s);
+    @include media($bp-large) {
+        display: none;
+    }
+}
+
+#button:before {
+    content:"\f0c9";
+    font: 24px/30px 'FontAwesome';
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,.25);
+}
+
+#button.active {
+    background: rgba(0,0,0,.5);
+}

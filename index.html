@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hypelabs</title>
+    <meta name="description" content="The toolkits and guidelines that power Hypenotic projects.">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="home"  > 
+<nav class="mobile">
+    <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Project Flow</a></li>
+        <li><a href="designer.html">Designer</a></li>
+        <li><a href="developer.html">Developer</a></li>
+        <li><a href="qa.html">Quality Assurance</a></li>
+        <li><a href="customer-service.html">Client Service</a></li>
+    </ul>
+</nav>
+
+<div id="content">
+    <header>
+        <div class="inner">
+            <a href="/" class="logo">
+                <span class="mega-octicon octicon-package"></span>
+                Hype<span>Labs</span>
+            </a>
+            <span id="button"></span>
+            <nav class="primary">
+                <a href="about.html">About</a>
+                <a href="project.html">Project Flow</a>
+                <a href="designer.html">Designer</a>
+                <a href="developer.html">Developer</a>
+                <a href="qa.html">Quality Assurance</a>
+                <a href="customer-service.html">Client Service</a>
+            </nav>
+        </div>
+    </header>
+
+<div class="wrapper">
+
+    
+        <section class="intro">
+            <h1>Hype<span>Labs</span></h1>
+            <p>The toolkits and guidelines that power Hypenotic projects.</p>
+            <small>Maintained by your friendly neighbourhood humans at Hypenotic.<br>
+            Created: 25 April 2015 &#8226; Updated: 12 January 2016</small>
+        </section>
+    
+
+    
+    
+</div><!--Ends .wrapper-->
+</div><!--End #content-->
+
+<script src="/src/js/app.min.js"></script>
+
+
+<script>
+    $('#button').on('click', function() {
+        $('#content').toggleClass('isOpen');
+        $(this).toggleClass('active');
+    });
+</script>
+
+
+
+</body>
+</html>

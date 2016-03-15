@@ -1,0 +1,83 @@
+@import url('http://weloveiconfonts.com/api/?family=fontawesome');
+
+body {
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+}
+
+h1 { 
+    font-size: 2.8rem;
+    font-weight: normal;
+    line-height: $base-line-height * 1.8;
+    span {
+        font-weight: 300;
+    }
+    @include media($bp-large) {
+        font-size: 3.8rem;
+        line-height: $base-line-height * 2.8;
+    }
+}
+
+p, ul, ol {
+    list-style-type: disc;
+    font-size: $base-font-size;
+}
+
+a { text-decoration: none; }
+
+footer {
+        opacity: 0.6; 
+}
+
+header nav a {
+    opacity: 0.5;
+    color: $base-masthead;
+    &:hover, &.active {
+        opacity: 1;
+    }   
+}
+
+.intro {
+    color: $white;
+    span, small {
+        opacity: 0.6;
+    }
+    p {
+        font-size: 1rem;
+        @include media($bp-large) {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+    small {
+        font-size: 0.7rem;
+        @include media($bp-large) {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.logo {
+    color: $base-masthead;
+    font-size: 1.4rem;
+    @include media($bp-large) {
+        font-size: 1.7rem;
+    }
+    span {
+        opacity: 0.6;
+        font-weight: 300;
+    }
+    .mega-octicon {
+        font-size: 24px;
+        @include media($bp-large) {
+            font-size: 32px;
+        }
+    }
+}
+
+.scroll-nav__list li { 
+	list-style-type: none;
+    &.active {
+        font-weight: bold;
+    }
+}

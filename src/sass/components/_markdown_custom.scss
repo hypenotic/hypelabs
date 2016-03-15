@@ -1,0 +1,17 @@
+.markdown-body a {
+    .developer & {
+        color: $developer;
+    }
+    .designer & {
+        color: $designer;
+    }
+    .customerservice & {
+        color: $customerservice;
+    }
+    .qa & {
+        color: $qa;
+    }
+    .project & {
+        color: $project;
+    }
+}
