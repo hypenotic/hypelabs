@@ -13,13 +13,3 @@ header {
         @include pad(1rem 2rem 1rem 2rem);
     }
 }
-/*
-.markdown-body h2:before {
-    @include media($bp-large) {
-        content:"";
-        display:block;
-        height:90px; 
-        margin:-90px 0 0;
-        visibility: hidden;
-    }
-}*/

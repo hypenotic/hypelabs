@@ -90,6 +90,23 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 
   It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
 
+## Installing with npm and using a Node-based asset pipeline
+
+1. Add Neat as a dependency:
+
+  ```bash
+  npm install --save bourbon-neat
+  ```
+
+1. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Bourbon and Neat to your node-sass `includePaths` option. `require("bourbon-neat").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project. You will also need to ensure that Bourbon is in the `includePaths` passed to node-sass.
+
+1. Import Neat into your Sass files, after Bourbon:
+
+  ```scss
+  @import "bourbon";
+  @import "neat";
+  ```
+
 ## Installing older versions of Neat
 
 1. Uninstall any Neat gem versions you already have:
@@ -125,7 +142,7 @@ In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are p
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 10;
-$max-width: em(1088);
+$max-width: 1200px;
 
 // Define your breakpoints
 $tablet: new-breakpoint(max-width 768px 8);
@@ -189,7 +206,11 @@ To make your layout responsive, use the `media()` mixin to modify both the grid 
 }
 ```
 
-By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the grid-lines by overriding the default settings as detailed in the section below.
+By setting `$visual-grid` to `true` in a file that is imported before
+`neat-helpers` (or prior to `neat` itself if you are using the default
+breakpoints), you can display the base grid in the background (default) or as an
+overlay. You can even change the color and opacity of the grid-lines by
+overriding the default settings as detailed in the section below.
 
 The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
 
@@ -207,8 +228,8 @@ splitting](http://simurai.com/blog/2012/08/29/media-query-splitting). This would
 ```scss
 $first-breakpoint-value: 400px;
 $second-breakpoint-value: 700px;
-$medium-viewport: new-breakpoint(min-width em($first-breakpoint-value) max-width em($second-breakpoint-value));
-$large-viewport: new-breakpoint(min-width em($second-breakpoint-value + 1));
+$medium-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
 
 .element {
   @include media($medium-viewport) {
@@ -229,7 +250,7 @@ If, for some reason, you still think that `omega-reset` is the only way you want
 
 The visual grid is built using CSS gradients whose stops might contain decimal values depending on the default settings of your grid. In order to render the gradient, browsers round the pixel values since they can’t deal with pixel fractions.
 
-As a result the viusal grid might be few pixels off in some browsers. The result is also inconsistent across browsers. For best results, preview your website on Firefox as it renders closest to the expected outcome.
+As a result the visual grid might be few pixels off in some browsers. The result is also inconsistent across browsers. For best results, preview your website on Firefox as it renders closest to the expected outcome.
 
 At this point, writing an internal rounding mechanism is not high priority.
 
@@ -259,14 +280,14 @@ Copyright © 2012–2015 [thoughtbot, inc](http://thoughtbot.com). Neat is free 
 
 ## About thoughtbot
 
-![thoughtbot](https://thoughtbot.com/logo.png)
+[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][hire]
 
 Neat is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!
-See [our other projects][community] or
-[hire us][hire] to design, develop, and grow your product.
+See [our other projects][community]
+or [hire us][hire] to design, develop, and grow your product.
 
 [community]: https://thoughtbot.com/community?utm_source=github
 [hire]: https://thoughtbot.com/hire-us?utm_source=github

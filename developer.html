@@ -13,7 +13,6 @@
     
 <nav class="mobile">
     <ul>
-        <li><a href="about">About</a></li>
         <li><a href="project">Project Flow</a></li>
         <li><a href="designer">Designer</a></li>
         <li><a href="developer">Developer</a></li>
@@ -31,7 +30,6 @@
             </a>
             <span id="button"></span>
             <nav class="primary">
-                <a href="about">About</a>
                 <a href="project">Project Flow</a>
                 <a href="designer">Designer</a>
                 <a class="active" href="developer">Developer</a>
@@ -51,10 +49,6 @@
         <h1>Developer Guide</h1>
 
 <p>Developer guidelines for Hypenotic employees and freelancers.</p>
-
-<h2>Philosophy</h2>
-
-<p>Content soon</p>
 
 <h2>Process</h2>
 
@@ -588,9 +582,6 @@ e.g. </li>
 
 <p>And now you&#39;re working with the latest stable version! Repeat this all when a new version comes out!</p>
 
-<h2>Python and Django</h2>
-
-<p>DOCS COMING SOON</p>
 
 <h2>WordPress</h2>
 
@@ -639,42 +630,6 @@ e.g. </li>
     
 </div><!--Ends .wrapper-->
 </div><!--End #content-->
-
-<script src="/src/js/app.min.js"></script>
-<script>
-    var selector = '.markdown-body h2';
-    addAnchors(selector);
-</script>
-
-<script>
-    $('#button').on('click', function() {
-        $('#content').toggleClass('isOpen');
-        $(this).toggleClass('active');
-    });
-</script>
-
-<script>
-  $('article').scrollNav({
-    sections: 'h2',
-    subSections: false,
-    sectionElem: 'section',
-    showHeadline: false,
-    headlineText: 'Scroll To',
-    showTopLink: false,
-    topLinkText: 'Top',
-    fixedMargin: 0,
-    scrollOffset: 80,
-    animated: true,
-    speed: 500,
-    insertTarget: 'aside',
-    insertLocation: 'appendTo',
-    arrowKeys: true,
-    scrollToHash: false,
-    onInit: null,
-    onRender: null,
-    onDestroy: null
-});
-</script>
 
 </body>
 </html>

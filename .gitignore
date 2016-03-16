@@ -1,5 +1,5 @@
-
-.sass-cache
+.htaccess
 .DS_Store
-node_modules
-.npm-debug.log
+.sass-cache/
+robots.txt
+node_modules/
