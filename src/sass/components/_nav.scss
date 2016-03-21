@@ -3,7 +3,6 @@
     @include media($bp-large) {
         display: inline;
         float: right;
-        margin-top: .3rem;
         & a:not(:last-child) {
             margin-right: 1.25rem;
         }

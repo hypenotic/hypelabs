@@ -72,7 +72,7 @@ gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/images/*', ['imagemin']);
     livereload.listen();
-    gulp.watch('*.php').on('change', livereload.changed);
+    gulp.watch('*.html').on('change', livereload.changed);
     //gulp.watch('*.html').on('change', livereload.changed);
 });
 

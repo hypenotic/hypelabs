@@ -1,81 +1,120 @@
 body {
+    background-color: $body-bg-color; 
+    color: $base-font-color;
     font-family: $base-font-family;
     line-height: $base-line-height;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: $header-font-family;
+    margin-bottom: modular-scale(0);
+    font-weight: 300;
+    .banner & {
+        margin-top: 0;
+    }
 }
 
 h1 { 
-    font-size: 2.8rem;
-    font-weight: normal;
-    line-height: $base-line-height * 1.8;
-    span {
-        font-weight: 300;
-    }
+    font-size: modular-scale(2);
+    line-height: modular-scale(2);
     @include media($bp-large) {
-        font-size: 3.8rem;
-        line-height: $base-line-height * 2.8;
+        font-size: modular-scale(3);
+        line-height: modular-scale(3);
+    }
+}
+
+h2 {
+    font-size: modular-scale(1);
+    line-height: modular-scale(1);
+    @include media($bp-large) {
+        font-size: modular-scale(2);
+        line-height: modular-scale(2);
+    }
+}
+
+h3 {
+    font-size: modular-scale(0);
+    line-height: modular-scale(0);
+    @include media($bp-large) {
+        font-size: modular-scale(1);
+        line-height: modular-scale(0);
     }
 }
 
 p, ul, ol {
-    list-style-type: disc;
-    font-size: $base-font-size;
+    font-size: modular-scale(0);
+    line-height: modular-scale(1);
+    @include media($bp-large) {
+        font-size: modular-scale(0);
+        line-height: modular-scale(1);
+    }
+    small & {
+        font-size: modular-scale(0, 1rem);
+        line-height: modular-scale(0, 1.4rem);
+        opacity: 0.6;
+    }
 }
 
-a { text-decoration: none; }
+ul, ol {
+    list-style-type: circle;
+    li {
+        margin: 0 0 .5em 0;
+    }
+}
 
-footer {
-        opacity: 0.6; 
+ol {
+    counter-reset: ordered-list;
+    li {
+        list-style: none;
+        &:before {
+            color: $base-font-color;
+            content: counter(ordered-list);
+            counter-increment: ordered-list;
+            display: block;
+            float: left;
+            margin-left: -50px;
+            padding: 0 10px;
+        }
+    }
+}
+
+a { 
+    color: $project;
+    text-decoration: none;
+    &:hover {
+        opacity: 0.6;
+    }
 }
 
 header nav a {
-    opacity: 0.5;
+    opacity: 0.6;
     color: $base-masthead;
     &:hover, &.active {
         opacity: 1;
     }   
 }
 
-.intro {
-    color: $white;
-    span, small {
-        opacity: 0.6;
-    }
-    p {
-        font-size: 1rem;
-        @include media($bp-large) {
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
-    }
-    small {
-        font-size: 0.7rem;
-        @include media($bp-large) {
-            font-size: 0.9rem;
-        }
-    }
-}
-
 .logo {
     color: $base-masthead;
-    font-size: 1.4rem;
-    @include media($bp-large) {
-        font-size: 1.7rem;
-    }
+    font-size: modular-scale(1);
     span {
         opacity: 0.6;
-        font-weight: 300;
-    }
-    .mega-octicon {
-        font-size: 24px;
-        @include media($bp-large) {
-            font-size: 32px;
-        }
     }
 }
 
-.scroll-nav__list li { 
-	list-style-type: none;
-    &.active {
-        font-weight: bold;
-    }
+.subhead {
+    font-size: modular-scale(0, 1.3rem);
+    line-height: modular-scale(0, 1.7rem);
+    -webkit-font-smoothing: antialiased;
+}
+
+.circle {
+    border-radius: 50%; 
+    border: 10px solid $base-font-color;
+    padding: 0em .3em; 
 }

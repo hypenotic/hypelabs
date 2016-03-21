@@ -2,14 +2,31 @@ header {
     background-color: $home;
     position: fixed;
     width: 100%;
+    height: 60px;
     z-index: 1;
+    padding: .8em;
+    .developer & { background-color: $developer; }
+    .designer & { background-color: $designer; }
+    .customerservice & { background-color: $customerservice; }
+    .qa & { background-color: $qa; }
+    .project & { background-color: $project; }
+}
+
+.banner {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .developer & { background-color: $developer; }
     .designer & { background-color: $designer; }
     .customerservice & { background-color: $customerservice; }
     .qa & { background-color: $qa; }
     .project & { background-color: $project; }
     .inner {
+        color: white;
         @include outer-container;
-        @include pad(1rem 2rem 1rem 2rem);
+        width: 60%;
+        text-align: center;
     }
 }

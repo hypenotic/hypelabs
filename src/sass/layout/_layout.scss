@@ -1,36 +1,25 @@
-html, body {
- 	height: 100%;
-}
-
-body {
- 	background: #555;
- 	overflow-x: hidden;
-}
-
-main {
-  @include outer-container;
-}
-
-#content {
-  position: relative;
-  @include transition-duration(0.3s);
-  background: #fff;
-  z-index: 1;
-}
-
-#content.isOpen {
-  @include transform(translate3d(-260px,0,0));//Change this - to + for left open
-}
-
-.wrapper {
-    @include outer-container;
-    @include pad(null 2rem null 2rem);
+section {
+    @include media($bp-large) {
+        margin-top: 0em;
+    }
 }
 
 article {
+    @include outer-container;    
+    padding: 2em;
+}
+
+.column-2 {
     @include media($bp-large) {
-        @include span-columns(8);
-        @include shift(4);
-        @include omega();
+    @include span-columns(5.5);
+    &:nth-child(3) {
+        @include shift(1);
+        }
     }
+}
+
+footer {
+    @include outer-container;    
+    padding: 2em;
+    text-align: center;
 }
