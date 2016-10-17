@@ -1,10 +1,17 @@
-.home #content {
+.home {
 	background-color: $home;
-	height: 100vh;
+	min-height: 100vh;
+	color: $white;
+	#content {
+		span, .dim {
+			opacity: 0.5;
+		}
+	}
 }
 
 .intro {
     position: absolute;
  	top: 40%;
   	transform: translateY(-40%);
+  	padding: 5% 40% 5% 5%;
 }
